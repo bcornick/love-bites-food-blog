@@ -1,0 +1,7 @@
+@import '/styles/sass/variables';
+
+.rowContainer {
+  display: flex;
+  gap: $content-gap;
+  margin: 0 calc($content-gap / 2);
+}

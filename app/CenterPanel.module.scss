@@ -1,0 +1,60 @@
+@import '/styles/sass/variables';
+@import '/styles/sass/animations';
+
+.glassBox {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba($color-white, 0.6);
+  border-radius: $box-border-radius;
+  box-shadow: 0 3px 20px rgba($color-dark, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: 1.5rem 0;
+  padding-bottom: 0;
+  height: 35rem;
+  width: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  .title {
+    font-size: 5rem;
+    letter-spacing: 2px;
+  }
+  .subHead {
+    font-size: 2rem;
+    margin: 0 2rem;
+  }
+  .portraits {
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+    width: 100%;
+    margin-top: 2rem;
+    .heart {
+      position: absolute;
+      font-size: 7rem;
+      left: calc(50% - 3.5rem);
+      filter: saturate(0.75);
+      &:hover {
+        cursor: pointer;
+        animation: shake 0.15s linear infinite;
+      }
+    }
+    .portraitBox {
+      position: relative;
+      height: 20rem;
+      width: 60rem;
+      .portrait {
+        object-fit: contain;
+        transition: all 0.2s;
+        filter: saturate(1.3);
+      }
+    }
+  }
+}

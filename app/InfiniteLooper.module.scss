@@ -1,0 +1,18 @@
+@import '/styles/sass/animations';
+
+.looper {
+  width: 100%;
+  .innerList {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    &[data-animate='true'] .listInstance {
+      animation: slideAnimation linear infinite;
+    }
+    .listInstance {
+      display: flex;
+      width: max-content;
+      animation: none;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import '/styles/sass/variables';
+
+.gridContainer {
+  position: fixed;
+  top: -10%;
+  left: -10%;
+  width: 120vw;
+  height: 120vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: $content-gap;
+}

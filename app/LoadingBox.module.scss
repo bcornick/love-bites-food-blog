@@ -1,0 +1,55 @@
+@import '/styles/sass/variables';
+@import '/styles/sass/animations';
+
+.loadingBox {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba($color-white, 0.6);
+  border-radius: $box-border-radius;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: 2rem 1.5rem;
+  padding-bottom: 0;
+  height: 35rem;
+  width: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  gap: 2rem;
+  .allSteps {
+    position: fixed;
+    top: 12rem;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20rem;
+    animation: cycleText 10s steps(1, end) infinite;
+    .step {
+      font-size: 3rem;
+      width: 50rem;
+    }
+  }
+  .progress {
+    position: relative;
+    height: 2rem;
+    width: 90%;
+    border: 0.5rem solid $color-light;
+    border-radius: $box-border-radius;
+    .color {
+      position: absolute;
+      top: 0;
+      background-color: $color-green;
+      width: 100%;
+      height: 1rem;
+      border-radius: $box-border-radius;
+      animation: progressBar 10s linear;
+    }
+  }
+}
