@@ -1,4 +1,6 @@
-const shuffleArray = (arr: string[]) => {
+import MealItemType from '@/app';
+
+const shuffleArray = (arr: MealItemType[]) => {
   let currentIndex = arr.length,
     randomIndex;
 

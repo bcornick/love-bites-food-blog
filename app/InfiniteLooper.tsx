@@ -19,7 +19,7 @@ interface InfiniteLooperProps {
   children: React.ReactNode;
 }
 
-const looperInstances = 10; // can be decreased as gallery size becomes larger
+const looperInstances = 1; // can be decreased as gallery size becomes larger
 
 const InfiniteLooper = ({ speed, children }: InfiniteLooperProps) => {
   const baseX = useMotionValue(0);
@@ -33,7 +33,7 @@ const InfiniteLooper = ({ speed, children }: InfiniteLooperProps) => {
     clamp: false,
   });
 
-  const x = useTransform(baseX, v => `${wrap(0, -3000, v)}%`);
+  const x = useTransform(baseX, v => `${wrap(0, -1000, v)}%`); // reset to -3000
 
   const directionFactor = useRef<number>(1);
   useAnimationFrame((t, delta) => {

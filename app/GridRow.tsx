@@ -1,9 +1,10 @@
 import shuffleArray from '@/helpers/shuffleArray';
 import GridItem from './GridItem';
 import styles from './GridRow.module.scss';
+import MealItemType from '@/app';
 
 interface GridRowProps {
-  imageArray: string[];
+  imageArray: MealItemType[];
 }
 
 const GridRow = ({ imageArray }: GridRowProps) => {
@@ -11,9 +12,9 @@ const GridRow = ({ imageArray }: GridRowProps) => {
 
   return (
     <div className={styles.rowContainer}>
-      {shuffledArray.map((image, i) => (
+      {shuffledArray.map((item, i) => (
         <GridItem
-          imageSrc={image}
+          item={item}
           key={i}
         />
       ))}

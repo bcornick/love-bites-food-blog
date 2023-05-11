@@ -2,15 +2,16 @@
 
 import GridRow from './GridRow';
 import InfiniteLooper from './InfiniteLooper';
-import styles from './ImageGrid.module.scss';
-import { hGrid, vGrid } from '@/helpers/rotationStyles';
+import MealItemType from '@/app';
 import {
   OrientationContextType,
   useOrientationContext,
 } from './context/orientation';
+import { WithId } from 'mongodb';
+import styles from './ImageGrid.module.scss';
 
 interface ImageGridProps {
-  imageArray: string[];
+  imageArray: MealItemType[];
 }
 
 const NUM_ROWS = 8;
@@ -20,8 +21,11 @@ const ImageGrid = ({ imageArray }: ImageGridProps) => {
 
   return (
     <div
-      className={styles.gridContainer}
-      style={orientation ? vGrid : hGrid}>
+      className={
+        orientation
+          ? `${styles.gridContainer} ${styles.vertical}`
+          : `${styles.gridContainer} ${styles.horizontal}`
+      }>
       {Array.from({ length: NUM_ROWS }, (v, i) => i).map(i => (
         <InfiniteLooper
           key={i}

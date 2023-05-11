@@ -11,4 +11,10 @@
   align-items: center;
   justify-content: center;
   gap: $content-gap;
+  &.horizontal {
+    transform: rotate(-188deg);
+  }
+  &.vertical {
+    transform: rotate(83deg);
+  }
 }

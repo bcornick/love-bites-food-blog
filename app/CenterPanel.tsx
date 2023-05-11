@@ -2,8 +2,8 @@
 
 import Image from 'next/image';
 import { architects_daughter } from './fonts';
-import brett from '../public/site-images/brett.png';
-import emma from '../public/site-images/emma.png';
+import brett from '../public/brett.png';
+import emma from '../public/emma.png';
 import {
   OrientationContextType,
   useOrientationContext,

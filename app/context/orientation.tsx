@@ -22,7 +22,7 @@ export type OrientationContextType = {
 export const OrientationContextProvider = ({
   children,
 }: OrientationContextProviderProps) => {
-  const [orientation, setOrientation] = useState(true); // true: vertical, false: horizontal
+  const [orientation, setOrientation] = useState(false); // true: vertical, false: horizontal
 
   return (
     <OrientationContext.Provider value={{ orientation, setOrientation }}>

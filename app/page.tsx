@@ -1,15 +1,19 @@
 import loadingTimeout from '@/helpers/loadingTimeout';
 import CenterPanel from './CenterPanel';
 import ImageGrid from './ImageGrid';
-import imageArray from '@/helpers/imageArray';
+import { getAll } from '@/helpers/getData';
+import MealItemType from '@/app';
 
 export default async function Home() {
-  await loadingTimeout(8000);
+  const fetchedArray = await getAll();
+  await loadingTimeout(10000);
 
   return (
     <main>
       <CenterPanel />
-      <ImageGrid imageArray={imageArray} />
+      {fetchedArray && (
+        <ImageGrid imageArray={fetchedArray as MealItemType[] | any[]} />
+      )}
     </main>
   );
 }
