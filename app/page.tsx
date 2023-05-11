@@ -5,8 +5,8 @@ import { getAll } from '@/helpers/getData';
 import MealItemType from '@/app';
 
 export default async function Home() {
-  const fetchedArray = await getAll();
   await loadingTimeout(10000);
+  const fetchedArray = await getAll();
 
   return (
     <main>
