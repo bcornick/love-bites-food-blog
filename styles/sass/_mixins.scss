@@ -1,0 +1,36 @@
+// Breakpoints
+@mixin screen-desktop-md {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin screen-desktop-sm {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin screen-tablet-lg {
+  @media (max-width: 999px) {
+    @content;
+  }
+}
+
+@mixin screen-tablet-sm {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin screen-mobile-lg {
+  @media (max-width: 425px) {
+    @content;
+  }
+}
+
+@mixin screen-mobile-sm {
+  @media (max-width: 375px) {
+    @content;
+  }
+}

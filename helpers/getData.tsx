@@ -2,8 +2,6 @@
 
 import { MongoClient } from 'mongodb';
 
-import loadingTimeout from '@/helpers/loadingTimeout';
-
 const mongodb_username = process.env.MONGODB_USERNAME;
 const mongodb_password = process.env.MONGODB_PASSWORD;
 const mongodb_clustername = process.env.MONGODB_CLUSTERNAME;
@@ -15,7 +13,6 @@ export const getAll = async () => {
   let client;
 
   try {
-    await loadingTimeout(9000);
     client = await MongoClient.connect(uri);
   } catch (e) {
     return false;
