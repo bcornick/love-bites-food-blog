@@ -5,14 +5,18 @@
   .innerList {
     display: flex;
     justify-content: center;
+    width: -moz-fit-content;
     width: fit-content;
     &[data-animate='true'] .listInstance {
       animation: slideAnimation linear infinite;
     }
     .listInstance {
       display: flex;
+      width: -moz-max-content;
       width: max-content;
       animation: none;
     }
   }
 }
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL0luZmluaXRlTG9vcGVyLm1vZHVsZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLGlDQUFpQzs7QUFFakM7RUFDRSxXQUFXO0VBQ1g7SUFDRSxhQUFhO0lBQ2IsdUJBQXVCO0lBQ3ZCLHVCQUFrQjtJQUFsQixrQkFBa0I7SUFDbEI7TUFDRSx5Q0FBeUM7SUFDM0M7SUFDQTtNQUNFLGFBQWE7TUFDYix1QkFBa0I7TUFBbEIsa0JBQWtCO01BQ2xCLGVBQWU7SUFDakI7RUFDRjtBQUNGIiwiZmlsZSI6IkluZmluaXRlTG9vcGVyLm1vZHVsZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCAnL3N0eWxlcy9zYXNzL2FuaW1hdGlvbnMnO1xuXG4ubG9vcGVyIHtcbiAgd2lkdGg6IDEwMCU7XG4gIC5pbm5lckxpc3Qge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgd2lkdGg6IGZpdC1jb250ZW50O1xuICAgICZbZGF0YS1hbmltYXRlPSd0cnVlJ10gLmxpc3RJbnN0YW5jZSB7XG4gICAgICBhbmltYXRpb246IHNsaWRlQW5pbWF0aW9uIGxpbmVhciBpbmZpbml0ZTtcbiAgICB9XG4gICAgLmxpc3RJbnN0YW5jZSB7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgd2lkdGg6IG1heC1jb250ZW50O1xuICAgICAgYW5pbWF0aW9uOiBub25lO1xuICAgIH1cbiAgfVxufVxuIl19 */
